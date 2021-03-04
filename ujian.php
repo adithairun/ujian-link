@@ -337,146 +337,56 @@ margin-top :800px;
 
 
 						<!-- MENU HARI KELAS XI -->
-                        </section><!-- /.menu-section -->
-                        <section id="kelasxi-section" class="inactive">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari1xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 1 <br>KELAS XI</h2>
-                                        </div>
-                                    </a>
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari2xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 2 <br> KELAS XI</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari3xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 3 <br> KELAS XI</h2>
-                                        </div>
-                                    </a>
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari4xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 4 <br> KELAS XI</h2>
-                                        </div>
-                                    </a>
+											</section>
 
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari5xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 5 <br> KELAS XI</h2>
-                                        </div>
-                                    </a>
 
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari6xi" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 6 <br> KELAS XI</h2>
-                                        </div>
-                                    </a>
+											<?php
 
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                    <a href="#menu" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>Back to menu</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-
-						<!-- AKHIR MENU HARI KELAS XI -->
+											include 'class/Database.php';
+											$data1 = mysqli_query($koneksi,"select * from hari NATURAL JOIN kelas where id_kelas = '2'")or die(mysqli_error($koneksi));;
+											while($row1 = mysqli_fetch_array($data1)){
+											?>
+											<!-- /.menu-section -->
+											<section id="kelasxi-section" class="inactive">
 
 
 
+													<div class="row">
+<table>
+															<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
 
-						<!-- MENU HARI KELAS XII -->
-                        </section><!-- /.menu-section -->
-                        <section id="kelasxii-section" class="inactive">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari1xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 1 <br>KELAS XII</h2>
-                                        </div>
-                                    </a>
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari2xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 2 <br> KELAS XII</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari3xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 3 <br> KELAS XII</h2>
-                                        </div>
-                                    </a>
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari4xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 4 <br> KELAS XII</h2>
-                                        </div>
-                                    </a>
+																	<a href="<?php echo $row1['href_hari']  ;?>" class="change-section">
+																			<div class="black-bg btn-menu">
+																					<i class="fa fa-calendar"></i>
+																					<h2><?php echo $row1['nama_hari']  ;?><br><?php echo $row1['nama_kelas']  ;?></h2>
+																			</div>
+																	</a>
 
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari5xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 5 <br> KELAS XII</h2>
-                                        </div>
-                                    </a>
+															</div>
+															<?php
+			}
+			?>
 
-                                </div>
-								<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#hari6xii" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                           <i class="fa fa-calendar"></i>
-                                            <h2>HARI KE 6 <br> KELAS XII</h2>
-                                        </div>
-                                    </a>
+													</div>
+</table>
 
-                                </div>
-                            </div>
-                            <div class="row margin-top-20">
-                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                    <a href="#menu" class="change-section">
-                                        <div class="black-bg btn-menu">
-                                            <h2>Back to menu</h2>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
+													<div class="row margin-top-20">
+															 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
+																	<a href="#menu" class="change-section">
+																			<div class="black-bg btn-menu">
+																					<h2>Back to menu</h2>
+																			</div>
+																	</a>
+															</div>
+													</div>
 
-						<!-- AKHIR MENU HARI KELAS XII -->
+											</section>
 
+
+					<!-- AKHIR MENU HARI KELAS XI -->
+
+
+		
 
 
 

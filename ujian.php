@@ -285,17 +285,17 @@ margin-top :800px;
 												<?php
 
 												include 'class/Database.php';
-												$data1 = mysqli_query($koneksi,"select * from hari NATURAL JOIN kelas ")or die(mysqli_error($koneksi));;
+												$data1 = mysqli_query($koneksi,"select * from hari NATURAL JOIN kelas where id_kelas = '1'")or die(mysqli_error($koneksi));;
 												while($row1 = mysqli_fetch_array($data1)){
 												?>
 												<!-- /.menu-section -->
                         <section id="kelasx-section" class="inactive">
 
-	<div class="container">
+
 
                             <div class="row">
 <table>
-                                <div class="col-xs-auto col-sm-auto col-md-2 col-lg-auto">
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
 
                                     <a href="<?php echo $row1['href_hari']  ;?>" class="change-section">
                                         <div class="black-bg btn-menu">
@@ -311,7 +311,7 @@ margin-top :800px;
 
                             </div>
 </table>
-														</div>
+
                             <div class="row margin-top-20">
                                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
                                     <a href="#menu" class="change-section">

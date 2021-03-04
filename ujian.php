@@ -386,7 +386,54 @@ margin-top :800px;
 					<!-- AKHIR MENU HARI KELAS XI -->
 
 
-		
+					<!-- MENU HARI KELAS XII -->
+										</section>
+
+
+										<?php
+
+										include 'class/Database.php';
+										$data1 = mysqli_query($koneksi,"select * from hari NATURAL JOIN kelas where id_kelas = '3'")or die(mysqli_error($koneksi));;
+										while($row1 = mysqli_fetch_array($data1)){
+										?>
+										<!-- /.menu-section -->
+										<section id="kelasxii-section" class="inactive">
+
+
+
+												<div class="row">
+<table>
+														<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
+
+																<a href="<?php echo $row1['href_hari']  ;?>" class="change-section">
+																		<div class="black-bg btn-menu">
+																				<i class="fa fa-calendar"></i>
+																				<h2><?php echo $row1['nama_hari']  ;?><br><?php echo $row1['nama_kelas']  ;?></h2>
+																		</div>
+																</a>
+
+														</div>
+														<?php
+		}
+		?>
+
+												</div>
+</table>
+
+												<div class="row margin-top-20">
+														 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
+																<a href="#menu" class="change-section">
+																		<div class="black-bg btn-menu">
+																				<h2>Back to menu</h2>
+																		</div>
+																</a>
+														</div>
+												</div>
+
+										</section>
+
+
+				<!-- AKHIR MENU HARI KELAS XII -->
 
 
 

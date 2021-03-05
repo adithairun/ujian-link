@@ -890,545 +890,189 @@
 
 
 
-                    <!-- MENU MAPEL KELAS XII -->
+                   
 
+
+      <!-- MENU MAPEL KELAS XII -->
+                    
 
                     <!-- MENU MAPEL HARI 1 KELAS XII -->
-                    <section id="hari1xii-section" class="inactive">
-                        <h2> HARI 1 KELAS XII</h2>
+                    <?php
+                    include 'class/Database.php';
+                    $datax1 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h1xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx1 = mysqli_fetch_array($datax1)){
+                    ?>
+                    <section id="<?php echo $rowx1['href_hari'] .'-section' ;?>" class="inactive">
+                    <h2><?php echo $rowx1['nama_hari']  ;;?> <br> <?php echo $rowx1['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/xXS2BPrANX66LaYT6">
+                                <a href="<?php echo $rowx1['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>PENDIDIKAN AGAMA ISLAM <br>KELAS XII</h2>
+                                        <h2><?php echo $rowx1['nama_mapel']  ;?> <br> <?php echo $rowx1['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="http://gg.gg/ndorw">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>PENDIDIKAN AGAMA KRISTEN <br>KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/v4MVgvufrvdPdU5f8">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>PENDIDIKAN AGAMA KATOLIK <br> KELAS X</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/StHbtAUYL8hgh42k8">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>MATEMATIKA WAJIB <br>KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                        
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 1 KELAS XII -->
 
 
-                    <!-- MENU MAPEL HARI 2 KELAS XII -->
-                    <section id="hari2xii-section" class="inactive">
-                        <h2> HARI 2 KELAS XII</h2>
+                     <!-- MENU MAPEL HARI 2 KELAS XII -->
+                     <?php
+                    include 'class/Database.php';
+                    $datax2 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h2xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx2 = mysqli_fetch_array($datax2)){
+                    ?>
+                     <section id="<?php echo $row2['href_hari'] .'-section' ;?>" class="inactive">
+                     <h2><?php echo $rowx2['nama_hari']  ;;?> <br> <?php echo $rowx2['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://bit.ly/BingW_XII_IPA">
+                                <a href="<?php echo $rowx2['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>BAHASA INGGRIS <br>KELAS XII IPA</h2>
+                                        <h2><?php echo $rowx2['nama_mapel']  ;;?> <br> <?php echo $rowx2['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://bit.ly/BingW_XII_BHS_IPS">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA INGGRIS <br>KELAS XII BAHASA & IPS</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/hnFu64UQeYyT4UfF9">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BIOLOGI <br>KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/wdBd5Bbf6itMyhWi6">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>EKONOMI <br>KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a
-                                    href="https://docs.google.com/forms/d/1gGFwHsRSmnkTGoXJ3bB8N1MxkLmEbxhWaYUBN-VIrzo/edit?usp=sharing">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>ANTROPOLOGI <br>KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                            
+                        
                     </section>
-
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS XII -->
 
-                    <!-- MENU MAPEL HARI 3 KELAS XII -->
-                    <section id="hari3xii-section" class="inactive">
-                        <h2> HARI 3 KELAS XII</h2>
+                      <!-- MENU MAPEL HARI 3 KELAS XII -->
+                      <?php
+                    include 'class/Database.php';
+                    $datax3 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h3xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx3 = mysqli_fetch_array($datax3)){
+                    ?>
+                     <section id="<?php echo $rowx3['href_hari'] .'-section' ;?>" class="inactive">
+                     <h2><?php echo $rowx3['nama_hari']  ;;?> <br> <?php echo $rowx3['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/nNuw3fW6wfx3XcGDA">
+                                <a href="<?php echo $rowx3['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>BAHASA INDONESIA<br> KELAS XII</h2>
+                                        <h2><?php echo $rowx3['nama_mapel']  ;;?> <br> <?php echo $rowx3['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/dkVyv97W234QFxt47">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>PPKN<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/DzC4HvYF18PstdBx7">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>MATEMATIKA PEMINATAN<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/aVRka5XNqBPKjx5p9">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>SEJARAH PEMINATAN<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://bit.ly/PAS_SASIN12">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA DAN SASTRA INDONESIA<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                            
+                       
                     </section>
+                    <!-- AKHIR MENU MAPEL HARI 2 KELAS XII -->
 
-                    <!-- AKHIR MENU MAPEL HARI 3 KELAS XII -->
 
 
                     <!-- MENU MAPEL HARI 4 KELAS XII -->
-                    <section id="hari4xii-section" class="inactive">
-                        <h2> HARI 4 KELAS XII</h2>
+                    <?php
+                    include 'class/Database.php';
+                    $datax4 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h4xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx4 = mysqli_fetch_array($datax4)){
+                    ?>
+                     <section id="<?php echo $rowx4['href_hari'] .'-section' ;?>" class="inactive">
+                     <h2><?php echo $rowx4['nama_hari']  ;;?> <br> <?php echo $rowx4['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/9VhvJerwr9LBDkaa6">
+                                <a href="<?php echo $rowx4['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>KIMIA<br> KELAS XII</h2>
+                                        <h2><?php echo $rowx4['nama_mapel']  ;;?> <br> <?php echo $rowx4['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/3ikxGvCrEB7zZ11s6">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>GOEGRAFI<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/Pbdds1aKwptm9jDK9">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA DAN SASTRA INGGRIS<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/D8q2opfUxfAegRFJ8">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>PENJASORKES<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                            
+                       
                     </section>
-
                     <!-- AKHIR MENU MAPEL HARI 4 KELAS XII -->
 
-                    <!-- MENU MAPEL HARI 5 KELAS XII -->
-                    <section id="hari5xii-section" class="inactive">
-                        <h2> HARI 5 KELAS XII</h2>
+
+
+                     <!-- MENU MAPEL HARI 5 KELAS XII -->
+                     <?php
+                    include 'class/Database.php';
+                    $datax5 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h5xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx5 = mysqli_fetch_array($datax5)){
+                    ?>
+                     <section id="<?php echo $row1['href_hari'] .'-section' ;?>" class="inactive">
+                     <h2><?php echo $rowx5['nama_hari']  ;;?> <br> <?php echo $row1['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/ZC12d2jEq4hBzZ6LA">
+                                <a href="<?php echo $row1['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>SENI BUDAYA<br> KELAS XII</h2>
+                                        <h2><?php echo $rowx5['nama_mapel']  ;;?> <br> <?php echo $rowx5['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="http://bit.ly/passosiologixiibhs2020">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>SOSIOLOGI LM<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/psFbAqzVr3t3miuN6">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>GEOGRAFI LM<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/aVxm8nAENk5DbgET9">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA ARAB LM<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/dQry1Pwfu1xP3kaZ8">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA DAN SASTRA INGGRIS LM<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/ysbXdaJowYeuefR87">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>KIMIA LM<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                            
+                       
                     </section>
-
                     <!-- AKHIR MENU MAPEL HARI 5 KELAS XII -->
 
+
+
                     <!-- MENU MAPEL HARI 6 KELAS XII -->
-                    <section id="hari6xii-section" class="inactive">
-                        <h2> HARI 6 KELAS XII</h2>
+                    <?php
+                    include 'class/Database.php';
+                    $datax6 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'xii' AND kd_hari = 'h6xii' ")or die(mysqli_error($koneksi));;
+                    while($rowx6 = mysqli_fetch_array($datax6)){
+                    ?>
+                     <section id="<?php echo $row1['href_hari'] .'-section' ;?>" class="inactive">
+                     <h2><?php echo $rowx6['nama_hari']  ;;?> <br> <?php echo $rowx6['nama_kelas']  ;?></h2>
                         <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <table>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSepYkPRBlDyJQTGX3iZou6ps31CBmaxYU2EXc8RuzjRkpPyoQ/viewform">
+                                <a href="<?php echo $rowx6['link_soal']  ;?>">
                                     <div class="black-bg btn-menu">
                                         <i class="fa fa-book"></i>
-                                        <h2>FISIKA<br> KELAS XII</h2>
+                                        <h2><?php echo $rowx6['nama_mapel']  ;;?> <br> <?php echo $rowx6['nama_kelas']  ;?></h2>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="http://bit.ly/passosiologixiiips2020">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>SOSIOLOGI<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/Th4t9UkDz87QHhELA">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>BAHASA ARAB<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://bit.ly/PAS_SEJARAHINDONESIA_XII-2020">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>SEJARAH INDONESIA<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                <a href="https://forms.gle/121CfuMtRojPVmJW6">
-                                    <div class="black-bg btn-menu">
-                                        <i class="fa fa-book"></i>
-                                        <h2>PRAKARYA<br> KELAS XII</h2>
-                                    </div>
-                                </a>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-                        <div class="row margin-top-20">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
-                                <a href="#kelasxii" class="change-section">
-                                    <div class="black-bg btn-menu">
-                                        <h2>Back to menu</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            
+                            <?php
+		}
+		?>
+        </table>
+                            
+                        
                     </section>
-
                     <!-- AKHIR MENU MAPEL HARI 6 KELAS XII -->
 
 
+
                     <!-- AKHIR MENU MAPEL KELAS XII -->
-
-
-
-
-
-
-
 
 
                     <section id="contact-section" class="inactive">

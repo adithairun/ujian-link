@@ -1,6 +1,6 @@
 <?php
 		include '../../class/Database.php';
-		
+
 			?>
 <html>
 <head>
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  
+
   <script language="JavaScript" type="text/javascript">
 function checkDelete(){
     return confirm('Data Siswa Akan Dihapus');
@@ -61,16 +61,16 @@ function checkDelete(){
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      
+
     </ul>
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        
+
         <div class="input-group-append">
           <button class="btn btn-navbar" type="submit">
-            
+
           </button>
         </div>
       </div>
@@ -80,29 +80,29 @@ function checkDelete(){
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        
+
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
-            
+
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          
+
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
-            
+
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          
+
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
-      
+
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
@@ -168,8 +168,8 @@ function checkDelete(){
                   <p>Edit Data</p>
                 </a>
               </li>
-			  
-			  
+
+
 
 
 
@@ -181,7 +181,7 @@ function checkDelete(){
               <i class="nav-icon fas fa-calendar"></i>
               <p>
                 Data Hari
-                
+
               </p>
             </a>
            </li>
@@ -191,11 +191,11 @@ function checkDelete(){
               <i class="nav-icon fas fa-calendar"></i>
               <p>
                 Data Kelas
-                
+
               </p>
             </a>
            </li>
-			
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -240,13 +240,14 @@ function checkDelete(){
          	<div class="card-body">
 
 									<button class="btn btn-success" data-toggle="modal" data-target="#form_modal"><span
-											class="fas fa-plus-circle"></span> Tambah Ekstrakulikuler</button>
+											class="fas fa-plus-circle"></span> Tambah Hari</button>
 									<table id="example1" class="table table-bordered table-striped">
 										<thead>
 											<tr>
 												<th>NO</th>
-				
-												<th>HARI KE </th>
+												<th><AKSI></th>
+												<th>HARI KE</th>
+												<th>KELAS</th>
 												<th>HREF </th>
 												<th>KODE HARI</th>
 
@@ -281,10 +282,10 @@ function checkDelete(){
 															data-target="#edit_modal<?php echo $fetch['id_hari']?>"><span
 																class="ion-compose"></span> Edit</button>
 
-														<a href="backend/hapus_ekskul?ekskul_id=<?php echo $fetch['ekskul_id'];?>"
-															onclick="return confirm('Pengguna Akan Dihapus, Lanjutkan ?')"><button
+														<a href="hapus_hari.php?id_hari=<?php echo $fetch['id_hari'];?>"
+															onclick="return confirm('Hari Akan Dihapus, Lanjutkan ?')"><button
 																class="btn btn-warning"> <span
-																	class="ion-trash-a"></span> Hapus Akun</button></a>
+																	class="ion-trash-a"></span> Hapus Hari</button></a>
 
 
 
@@ -408,8 +409,8 @@ function checkDelete(){
 
 																		</div>
 
-																		
-																		
+
+
 
 																		<div class="form-group">
 
@@ -436,7 +437,7 @@ function checkDelete(){
 																		</div>
 
 
-																		
+
 
 																		<div class="form-group">
 																			<label>Pilih Kelas</label>
@@ -517,7 +518,7 @@ function checkDelete(){
 
 												<?php
  include '../../class/Database.php';;
-$query1 = "SELECT * FROM ekskul";
+$query1 = "SELECT * FROM kelas order by nama_kelas";
 $result = mysqli_query($koneksi, $query1);
 
 
@@ -527,7 +528,7 @@ $result = mysqli_query($koneksi, $query1);
 														<div class="modal-content">
 
 															<form autocomplete="off" method="POST"
-																action="save_ekskul.php">
+																action="save_hari.php">
 																<div class="modal-header">
 																	<h4 class="modal-title">Tambah Akun Pembina</h4>
 																</div>
@@ -537,17 +538,49 @@ $result = mysqli_query($koneksi, $query1);
 
 																	<div class="form-group">
 
-																			<label>Nama Ekskul </label>
+																			<label>NAMA HARI </label>
 
-																			<input type="text" id="nama_ekskul" name="nama_ekskul"
+																			<input type="text" id="nama_ekskul" name="nama_hari"
 																				class="form-control"
 																				required="required" />
 																				<div id="result"></div>
 																		</div>
 
 																		<div class="form-group">
-																			<label>Pembina Ekskul</label>
-																			<input type="text" name="pembina_ekskul"
+																			<label>Pilih Kelas</label>
+																			<select name="id_kelas"
+																				class="form-control"
+																				required="required">
+																				<option value="">Pilih Kelas</option>
+																				<?php
+
+
+									while($data = mysqli_fetch_assoc($result) ){?>
+
+																				<option
+																					value="<?php echo $data['id_kelas']; ?>">
+																					<?php echo $data['nama_kelas']; ?>
+																				</option>
+
+																				<?php } ?>
+																			</select>
+																		</div>
+
+																		<div class="form-group">
+
+																				<label>HREF HARI </label>
+
+																				<input type="text" name="href_hari"
+																					class="form-control"
+																					required="required" />
+																					<div id="result"></div>
+																			</div>
+
+
+
+																		<div class="form-group">
+																			<label>KD HARI</label>
+																			<input type="text" name="kd_hari"
 																				class="form-control"
 																				required="required" />
 																		</div>
@@ -846,7 +879,7 @@ $result = mysqli_query($koneksi, $query1);
 <!-- Jangan menghapus atau mengubah bagian footer, tolong hargailah pengembang awal -->
   <footer class="main-footer">
     <strong> &copy; 2020 <a href="http://instagram.com/adithairun">Adit Hairun</a> All rights reserved. | Template By <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    
+
     <div class="float-right d-none d-sm-inline-block">
       <b>v</b>1.2
     </div>

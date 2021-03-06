@@ -245,8 +245,11 @@ function checkDelete(){
 										<thead>
 											<tr>
 												<th>NO</th>
-				
-												<th>HARI KE </th>
+												<th>AKSI</th>
+
+
+												
+												<th>KELAS </th>
 												<th>HREF </th>
 												<th>KODE HARI</th>
 
@@ -262,7 +265,7 @@ function checkDelete(){
 
 					//$query = mysqli_query($koneksi, "SELECT * FROM storage ORDER BY perbaiki ASC") or die(mysqli_error());
 
-					$query = mysqli_query($koneksi, "SELECT * FROM hari NATURAL JOIN kelas ORDER BY id_hari") or die(mysqli_error());
+					$query = mysqli_query($koneksi, "SELECT * FROM hari NATURAL JOIN kelas ORDER BY id_kelas") or die(mysqli_error());
 
 
 
@@ -270,7 +273,7 @@ function checkDelete(){
 
 				?>
 
-											<tr class="del_student<?php echo $fetch['id_hari']?>">
+											<tr class="del_student<?php echo $fetch['id_kelas']?>">
 
 												<th><?php echo $no++; ?></th>
 
@@ -278,7 +281,7 @@ function checkDelete(){
 													<center>
 
 														<button class="btn btn-success" data-toggle="modal"
-															data-target="#edit_modal<?php echo $fetch['id_hari']?>"><span
+															data-target="#edit_modal<?php echo $fetch['id_kelas']?>"><span
 																class="ion-compose"></span> Edit</button>
 
 														<a href="backend/hapus_ekskul?ekskul_id=<?php echo $fetch['ekskul_id'];?>"
@@ -304,10 +307,10 @@ function checkDelete(){
 
 
 
-												<td><?php echo $fetch['nama_hari']?></td>
+												
 												<td><?php echo $fetch['nama_kelas']?></td>
-												<td><?php echo $fetch['href_hari']?></td>
-												<td><?php echo $fetch['kd_hari']?></td>
+												<td><?php echo $fetch['href_kelas']?></td>
+												<td><?php echo $fetch['kd_kelas']?></td>
 
 
 
@@ -358,7 +361,7 @@ function checkDelete(){
 
 
 
-												<div class="modal fade" id="edit_modal<?php echo $fetch['id_hari']?>"
+												<div class="modal fade" id="edit_modal<?php echo $fetch['id_kelas']?>"
 													aria-hidden="true">
 
 													<div class="modal-dialog modal-dialog-centered">
@@ -384,8 +387,8 @@ function checkDelete(){
 
 
 
-																			<input type="hidden" name="id_hari"
-																				value="<?php echo $fetch['id_hari']?>"
+																			<input type="hidden" name="id_kelas"
+																				value="<?php echo $fetch['id_kelas']?>"
 																				class="form-control" />
 
 
@@ -396,17 +399,7 @@ function checkDelete(){
 
 
 
-																		<div class="form-group">
-
-																			<label>Nama Hari</label>
-
-																			<input type="text" name="nama_hari"
-																				class="form-control"
-																				value="<?php echo $fetch['nama_hari']?>"
-																				required="required" />
-														<!--						<div id="result1"></div> -->
-
-																		</div>
+																		
 
 																		
 																		
@@ -669,7 +662,7 @@ $result = mysqli_query($koneksi, $query1);
 
 								<!-- Modal -->
 
-								<div class="modal fade" id="exampleModal<?php echo $fetch['id_hari']?>" tabindex="-1"
+								<div class="modal fade" id="exampleModal<?php echo $fetch['id_kelas']?>" tabindex="-1"
 									role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 									<div class="modal-dialog" role="document">
@@ -699,8 +692,8 @@ $result = mysqli_query($koneksi, $query1);
 
 														<label>NISN</label>
 
-														<input type="hidden" name="id_hari"
-															value="<?php echo $fetch1['id_hari']?>"
+														<input type="hidden" name="id_kelas"
+															value="<?php echo $fetch1['id_kelas']?>"
 															class="form-control" />
 
 														<input type="number" name="status"

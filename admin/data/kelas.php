@@ -399,7 +399,17 @@ function checkDelete(){
 
 
 
+																		<div class="form-group">
 
+																			<label>NAMA KELAS</label>
+
+																			<input type="text" name="nama_kelas"
+																				class="form-control"
+																				value="<?php echo $fetch['nama_kelas']?>"
+																				required="required" />
+																		<!--						<div id="result1"></div> -->
+
+																		</div>
 
 
 
@@ -430,17 +440,7 @@ function checkDelete(){
 
 
 
-																		<div class="form-group">
 
-																			<label>NAMA KELAS</label>
-
-																			<input type="text" name="nama_kelas"
-																				class="form-control"
-																				value="<?php echo $fetch['nama_kelas']?>"
-																				required="required" />
-																	<!--						<div id="result1"></div> -->
-
-																		</div>
 
 
 
@@ -509,9 +509,9 @@ $result = mysqli_query($koneksi, $query1);
 														<div class="modal-content">
 
 															<form autocomplete="off" method="POST"
-																action="save_ekskul.php">
+																action="save_kelas.php">
 																<div class="modal-header">
-																	<h4 class="modal-title">Tambah Akun Pembina</h4>
+																	<h4 class="modal-title">Tambah Kelas</h4>
 																</div>
 																<div class="modal-body">
 																	<div class="col-md-3"></div>
@@ -519,20 +519,28 @@ $result = mysqli_query($koneksi, $query1);
 
 																	<div class="form-group">
 
-																			<label>Nama Ekskul </label>
+																			<label>NAMA Kelas </label>
 
-																			<input type="text" id="nama_ekskul" name="nama_ekskul"
+																			<input type="text" name="nama_kelas"
 																				class="form-control"
 																				required="required" />
 																				<div id="result"></div>
 																		</div>
 
 																		<div class="form-group">
-																			<label>Pembina Ekskul</label>
-																			<input type="text" name="pembina_ekskul"
+																			<label>HREF Kelas</label>
+																			<input type="text" name="href_kelas"
 																				class="form-control"
 																				required="required" />
 																		</div>
+
+																		<div class="form-group">
+																			<label>KODE Kelas</label>
+																			<input type="text" name="kd_kelas"
+																				class="form-control"
+																				required="required" />
+																		</div>
+
 
 
 

@@ -177,7 +177,7 @@ function checkDelete(){
 
         </ul>
 		 <li class="nav-item has-treeview">
-            <a href="hari.php" class="nav-link active">
+            <a href="hari.php" class="nav-link ">
               <i class="nav-icon fas fa-calendar"></i>
               <p>
                 Data Hari
@@ -187,8 +187,8 @@ function checkDelete(){
            </li>
 
 		   <li class="nav-item has-treeview">
-            <a href="kelas.php" class="nav-link">
-              <i class="nav-icon fas fa-calendar"></i>
+            <a href="kelas.php" class="nav-link active">
+              <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
                 Data Kelas
 
@@ -284,8 +284,8 @@ function checkDelete(){
 															data-target="#edit_modal<?php echo $fetch['id_kelas']?>"><span
 																class="ion-compose"></span> Edit</button>
 
-														<a href="backend/hapus_ekskul?ekskul_id=<?php echo $fetch['ekskul_id'];?>"
-															onclick="return confirm('Pengguna Akan Dihapus, Lanjutkan ?')"><button
+														<a href="hapus_kelas.php?ekskul_id=<?php echo $fetch['ekskul_id'];?>"
+															onclick="return confirm('Kelas Akan Dihapus, Lanjutkan ?')"><button
 																class="btn btn-warning"> <span
 																	class="ion-trash-a"></span> Hapus Akun</button></a>
 
@@ -369,11 +369,11 @@ function checkDelete(){
 														<div class="modal-content">
 
 															<form autocomplete="off" method="POST"
-																action="update_hari.php">
+																action="update_kelas.php">
 
 																<div class="modal-header">
 
-																	<h4 class="modal-title">Ubah Ekstrakulikuler</h4>
+																	<h4 class="modal-title">Ubah Kelas</h4>
 
 																</div>
 
@@ -406,11 +406,11 @@ function checkDelete(){
 
 																		<div class="form-group">
 
-																			<label>HREF Hari</label>
+																			<label>HREF KELAS</label>
 
-																			<input type="text" readonly name="href_hari"
+																			<input type="text" name="href_kelas"
 																				class="form-control"
-																				value="<?php echo $fetch['href_hari']?>"
+																				value="<?php echo $fetch['href_kelas']?>"
 																				required="required" />
 														<!--						<div id="result1"></div> -->
 
@@ -418,11 +418,11 @@ function checkDelete(){
 
 																		<div class="form-group">
 
-																			<label>KODE Hari</label>
+																			<label>KODE KELAS</label>
 
-																			<input type="text" name="kd_hari"
+																			<input type="text" name="kd_kelas"
 																				class="form-control"
-																				value="<?php echo $fetch['kd_hari']?>"
+																				value="<?php echo $fetch['kd_kelas']?>"
 																				required="required" />
 														<!--						<div id="result1"></div> -->
 
@@ -430,28 +430,17 @@ function checkDelete(){
 
 
 
-
 																		<div class="form-group">
-																			<label>Pilih Kelas</label>
-																			<select name="id_kelas"
+
+																			<label>NAMA KELAS</label>
+
+																			<input type="text" name="nama_kelas"
 																				class="form-control"
-																				required="required">
-																				<option value="">Pilih Kelas</option>
-																				<?php
+																				value="<?php echo $fetch['nama_kelas']?>"
+																				required="required" />
+																	<!--						<div id="result1"></div> -->
 
-
-									while($data = mysqli_fetch_assoc($result) ){?>
-
-																				<option
-																					value="<?php echo $data['id_kelas']; ?>">
-																					<?php echo $data['nama_kelas']; ?>
-																				</option>
-
-																				<?php } ?>
-																			</select>
 																		</div>
-
-
 
 
 

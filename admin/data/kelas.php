@@ -265,7 +265,7 @@ function checkDelete(){
 
 					//$query = mysqli_query($koneksi, "SELECT * FROM storage ORDER BY perbaiki ASC") or die(mysqli_error());
 
-					$query = mysqli_query($koneksi, "SELECT * FROM hari NATURAL JOIN kelas ORDER BY id_kelas") or die(mysqli_error());
+					$query = mysqli_query($koneksi, "SELECT * FROM kelas ORDER BY nama_kelas") or die(mysqli_error());
 
 
 
@@ -284,7 +284,7 @@ function checkDelete(){
 															data-target="#edit_modal<?php echo $fetch['id_kelas']?>"><span
 																class="ion-compose"></span> Edit</button>
 
-														<a href="hapus_kelas.php?ekskul_id=<?php echo $fetch['ekskul_id'];?>"
+														<a href="hapus_kelas.php?id_kelas=<?php echo $fetch['id_kelas'];?>"
 															onclick="return confirm('Kelas Akan Dihapus, Lanjutkan ?')"><button
 																class="btn btn-warning"> <span
 																	class="ion-trash-a"></span> Hapus Akun</button></a>

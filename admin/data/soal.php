@@ -275,7 +275,7 @@ function checkDelete(){
 
 					//$query = mysqli_query($koneksi, "SELECT * FROM storage ORDER BY perbaiki ASC") or die(mysqli_error());
 
-					$query = mysqli_query($koneksi, "SELECT * FROM soal NATURAL JOIN kelas ORDER BY nama_mapel") or die(mysqli_error());
+					$query = mysqli_query($koneksi, "SELECT * FROM soal NATURAL JOIN hari ORDER BY nama_mapel") or die(mysqli_error());
 
 
 
@@ -294,7 +294,7 @@ function checkDelete(){
 															data-target="#edit_modal<?php echo $fetch['id_hari']?>"><span
 																class="ion-compose"></span> Edit</button>
 
-														<a href="hapus_hari.php?id_hari=<?php echo $fetch['id_hari'];?>"
+														<a href="hapus_soal.php?id_soal=<?php echo $fetch['id_hari'];?>"
 															onclick="return confirm('Hari Akan Dihapus, Lanjutkan ?')"><button
 																class="btn btn-warning"> <span
 																	class="ion-trash-a"></span> Hapus Hari</button></a>
@@ -330,15 +330,7 @@ function checkDelete(){
 
 
 
-												<?php
 
- if(isset($_GET['format'])){
-
-	 echo "Data berhasil di format.</p>";
-
- }
-
- ?>
 
 												<!-- DISBALE PERINGATAN DATABLE -->
 

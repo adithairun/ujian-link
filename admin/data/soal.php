@@ -177,7 +177,7 @@ function checkDelete(){
 
         </ul>
 		 <li class="nav-item has-treeview">
-            <a href="hari.php" class="nav-link active">
+            <a href="hari.php" class="nav-link">
               <i class="nav-icon fas fa-calendar"></i>
               <p>
                 Data Hari
@@ -197,7 +197,7 @@ function checkDelete(){
            </li>
 
 					 <li class="nav-item has-treeview">
-		            <a href="soal.php" class="nav-link">
+		            <a href="soal.php" class="nav-link  active">
 		              <i class="nav-icon fas fa-paste"></i>
 		              <p>
 		                Data Soal
@@ -256,10 +256,12 @@ function checkDelete(){
 											<tr>
 												<th>NO</th>
 												<th>AKSI</th>
+												<th>NAMA MAPEL</th>
 												<th>HARI KE</th>
 												<th>KELAS</th>
-												<th>HREF </th>
-												<th>KODE HARI</th>
+
+												<th>LINK SOAL</th>
+
 
 
 
@@ -273,7 +275,7 @@ function checkDelete(){
 
 					//$query = mysqli_query($koneksi, "SELECT * FROM storage ORDER BY perbaiki ASC") or die(mysqli_error());
 
-					$query = mysqli_query($koneksi, "SELECT * FROM hari NATURAL JOIN kelas ORDER BY id_hari") or die(mysqli_error());
+					$query = mysqli_query($koneksi, "SELECT * FROM soal NATURAL JOIN kelas ORDER BY nama_mapel") or die(mysqli_error());
 
 
 
@@ -314,11 +316,14 @@ function checkDelete(){
 												</td>
 
 
-
+													<td><?php echo $fetch['nama_mapel']?></td>
 												<td><?php echo $fetch['nama_hari']?></td>
+
+
 												<td><?php echo $fetch['nama_kelas']?></td>
-												<td><?php echo $fetch['href_hari']?></td>
-												<td><?php echo $fetch['kd_hari']?></td>
+
+												<td><?php echo $fetch['link_soal']?></td>
+
 
 
 

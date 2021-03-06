@@ -318,7 +318,7 @@
                     $datax = mysqli_query($koneksi,"select * from hari NATURAL JOIN kelas where kd_kelas = 'x'")or die(mysqli_error($koneksi));;
                     while($rowx = mysqli_fetch_array($datax)){
                     ?>
-												
+
                     <!-- /.menu-section -->
                     <section id="kelasx-section" class="inactive">
 
@@ -482,12 +482,12 @@
 
 
                     <!-- MENU MAPEL KELAS X -->
-                    
+
 
                     <!-- MENU MAPEL HARI 1 KELAS X -->
                     <?php
                     include 'class/Database.php';
-                    $datax1 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'x' AND id_hari = '1' ")or die(mysqli_error($koneksi));;
+                    $datax1 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'x' AND kd_hari = 'h1x' ")or die(mysqli_error($koneksi));;
                     while($rowx1 = mysqli_fetch_array($datax1)){
                     ?>
                     <section id="<?php echo $rowx1['href_hari'] .'-section' ;?>" class="inactive">
@@ -502,12 +502,12 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
+
                         <div class="row margin-top-20">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
                                 <a href="#kelasx" class="change-section">
@@ -539,12 +539,12 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
+
                         <div class="row margin-top-20">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  pull-center">
                                 <a href="#kelasx" class="change-section">
@@ -575,13 +575,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS X -->
 
@@ -605,13 +605,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 4 KELAS X -->
 
@@ -635,13 +635,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 5 KELAS X -->
 
@@ -650,7 +650,7 @@
                     <!-- MENU MAPEL HARI 6 KELAS X -->
                     <?php
                     include 'class/Database.php';
-                    $datax6 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'x' AND kd_hari = 'hx6' ")or die(mysqli_error($koneksi));;
+                    $datax6 = mysqli_query($koneksi,"select * from soal NATURAL JOIN hari, kelas where kd_kelas = 'x' AND kd_hari = 'h6x' ")or die(mysqli_error($koneksi));;
                     while($rowx6 = mysqli_fetch_array($datax6)){
                     ?>
                      <section id="<?php echo $row1['href_hari'] .'-section' ;?>" class="inactive">
@@ -665,13 +665,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                        
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 6 KELAS X -->
 
@@ -689,11 +689,11 @@
 
 
 
-                    
+
 
 
       <!-- MENU MAPEL KELAS XI -->
-                    
+
 
                     <!-- MENU MAPEL HARI 1 KELAS XI -->
                     <?php
@@ -713,13 +713,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 1 KELAS XI -->
 
@@ -742,13 +742,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS XI -->
 
@@ -770,13 +770,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS XI -->
 
@@ -800,13 +800,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 4 KELAS XI -->
 
@@ -830,13 +830,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 5 KELAS XI -->
 
@@ -860,13 +860,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                        
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 6 KELAS XI -->
 
@@ -890,11 +890,11 @@
 
 
 
-                   
+
 
 
       <!-- MENU MAPEL KELAS XII -->
-                    
+
 
                     <!-- MENU MAPEL HARI 1 KELAS XII -->
                     <?php
@@ -914,12 +914,12 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                        
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 1 KELAS XII -->
 
@@ -942,13 +942,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                        
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS XII -->
 
@@ -970,13 +970,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 2 KELAS XII -->
 
@@ -1000,13 +1000,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 4 KELAS XII -->
 
@@ -1030,13 +1030,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                       
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 5 KELAS XII -->
 
@@ -1060,13 +1060,13 @@
                                     </div>
                                 </a>
                             </div>
-                            
+
                             <?php
 		}
 		?>
         </table>
-                            
-                        
+
+
                     </section>
                     <!-- AKHIR MENU MAPEL HARI 6 KELAS XII -->
 

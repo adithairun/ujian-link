@@ -195,6 +195,15 @@ function checkDelete(){
               </p>
             </a>
            </li>
+					 <li class="nav-item has-treeview">
+		            <a href="soal.php" class="nav-link">
+		              <i class="nav-icon fas fa-paste"></i>
+		              <p>
+		                Data Soal
+
+		              </p>
+		            </a>
+		           </li>
 
       </nav>
       <!-- /.sidebar-menu -->

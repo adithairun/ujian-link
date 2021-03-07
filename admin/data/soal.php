@@ -275,7 +275,7 @@ function checkDelete(){
 
 					//$query = mysqli_query($koneksi, "SELECT * FROM storage ORDER BY perbaiki ASC") or die(mysqli_error());
 
-					$query = mysqli_query($koneksi, "SELECT * FROM soal NATURAL JOIN hari ORDER BY nama_mapel") or die(mysqli_error());
+					$query = mysqli_query($koneksi, "SELECT soal.id_soal, soal.nama_mapel, soal.link_soal, hari.nama_hari, kelas.nama_kelas from soal INNER JOIN hari on soal.id_soal = hari.id_hari  INNER JOIN kelas on hari.id_hari = kelas.id_kelas ") or die(mysqli_error());
 
 
 
@@ -283,7 +283,7 @@ function checkDelete(){
 
 				?>
 
-											<tr class="del_student<?php echo $fetch['id_hari']?>">
+											<tr class="del_student<?php echo $fetch['id_soal']?>">
 
 												<th><?php echo $no++; ?></th>
 
@@ -291,10 +291,10 @@ function checkDelete(){
 													<center>
 
 														<button class="btn btn-success" data-toggle="modal"
-															data-target="#edit_modal<?php echo $fetch['id_hari']?>"><span
+															data-target="#edit_modal<?php echo $fetch['id_soal']?>"><span
 																class="ion-compose"></span> Edit</button>
 
-														<a href="hapus_soal.php?id_soal=<?php echo $fetch['id_hari'];?>"
+														<a href="hapus_soal.php?id_soal=<?php echo $fetch['id_soal'];?>"
 															onclick="return confirm('Hari Akan Dihapus, Lanjutkan ?')"><button
 																class="btn btn-warning"> <span
 																	class="ion-trash-a"></span> Hapus Hari</button></a>
